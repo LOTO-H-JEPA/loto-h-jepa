@@ -3,7 +3,7 @@
 # Dein sehr langer Projekttitel steht hier (gerne richtig lang)
 
 <p class="subhead">
-Ein Apple-artiger 1–2 Satz Teaser: Problem → Approach → Contribution.
+ Apple-artiger 1–2 Satz Teaser: Problem → Approach → Contribution.
 </p>
 
 <div class="badges">
