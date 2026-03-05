@@ -1,0 +1,29 @@
+site_name: Project Page
+site_url: ""
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - content.tooltips
+  palette:
+    - scheme: default
+
+nav:
+  - Home: index.md
+
+extra_css:
+  - styles/extra.css
+
+extra_javascript:
+  - js/extra.js
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
