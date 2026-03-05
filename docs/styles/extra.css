@@ -1,117 +1,124 @@
-:root{
-  --page-max: 1100px;
-  --card-radius: 18px;
-  --card-border: rgba(0,0,0,.08);
-  --shadow: 0 18px 45px rgba(0,0,0,.08);
+/* remove header + navigation completely */
+
+.md-header {
+  display: none !important;
 }
 
-.md-content__inner { max-width: var(--page-max); margin: 0 auto; }
-.md-main__inner { margin-top: 0; }
-
-/* Onepager: Sidebar ausblenden */
-@media (min-width: 76.25em){
-  .md-sidebar--primary { display:none; }
-  .md-content { grid-column: 1 / -1; }
+.md-tabs {
+  display: none !important;
 }
 
-/* Hero */
-.hero { padding: 56px 0 10px 0; }
-.hero h1{
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin: 0 0 14px 0;
-}
-.subhead{
-  font-size: 1.1rem;
-  opacity: .85;
-  max-width: 70ch;
+.md-sidebar {
+  display: none !important;
 }
 
-.badges{ display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0 0; }
-.badge{
-  display:inline-flex; align-items:center; gap:8px;
-  padding:10px 14px; border-radius:999px;
-  border:1px solid var(--card-border);
-  background: rgba(255,255,255,.65);
-  backdrop-filter: blur(8px);
-  text-decoration:none; font-weight:600;
+.md-footer {
+  display: none !important;
 }
 
-/* Sections */
-.section{ padding:34px 0; border-top:1px solid rgba(0,0,0,.06); }
-.section h2{ font-size:1.6rem; letter-spacing:-0.01em; margin-top:0; }
 
-/* Timeline */
-.timeline-img{
-  width:100%;
-  border-radius: var(--card-radius);
-  border:1px solid var(--card-border);
-  box-shadow: var(--shadow);
+/* center content */
+
+.md-main__inner {
+  margin: 0 auto;
+  max-width: 950px;
 }
 
-/* Video */
-.video-wrap{
-  border-radius: var(--card-radius);
-  border:1px solid var(--card-border);
-  overflow:hidden;
-  box-shadow: var(--shadow);
+.md-content__inner {
+  margin: 0 auto;
+  max-width: 950px;
 }
 
-/* Cards */
-.grid{
-  display:grid;
+
+/* remove section borders */
+
+.section {
+  border: none !important;
+  padding: 80px 0;
+}
+
+
+/* typography */
+
+h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/* center text blocks */
+
+p {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* timeline image */
+
+.timeline-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+/* cards */
+
+.grid {
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap:16px;
+  gap: 20px;
 }
 
-.card{
+.card {
   grid-column: span 6;
-  border-radius: var(--card-radius);
-  border:1px solid var(--card-border);
-  background: rgba(255,255,255,.9);
-  box-shadow: 0 10px 26px rgba(0,0,0,.06);
-  padding:18px;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  position: relative;
-  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 25px;
+  transition: all 0.2s ease;
+  text-align: center;
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow);
-  border-color: rgba(0,0,0,.14);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.card a{ text-decoration:none; }
-
-.card-title{
-  font-weight:800;
-  letter-spacing:-0.01em;
-  margin:0 0 6px 0;
-  font-size:1.05rem;
+.card-title {
+  font-weight: 700;
 }
 
-.card-meta{ opacity:.7; font-size:.92rem; margin:0; }
-
-/* Hover reveal */
-.card-desc{
-  margin-top:12px;
-  opacity:0;
-  transform: translateY(8px);
-  transition: opacity .18s ease, transform .18s ease;
-  color: rgba(0,0,0,.78);
-  font-size:.95rem;
-}
-.card:hover .card-desc{ opacity:1; transform: translateY(0); }
-
-/* Paper cards */
-.card.paper{ grid-column: span 12; }
-@media (min-width: 900px){
-  .card.paper{ grid-column: span 6; }
+.card-desc {
+  opacity: 0;
+  margin-top: 10px;
+  transition: opacity 0.2s ease;
 }
 
-/* Mobile */
-@media (max-width: 720px){
-  .card{ grid-column: span 12; }
+.card:hover .card-desc {
+  opacity: 1;
+}
+
+@media (max-width: 900px){
+  .card{
+    grid-column: span 12;
+  }
+}
+
+
+/* video */
+
+.video-wrap{
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
 }
