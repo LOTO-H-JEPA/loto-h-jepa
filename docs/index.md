@@ -31,8 +31,8 @@ Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Arc
 
 <div class="hero-badges">
   <a class="hero-badge" href="#timeline">Timeline</a>
-  <a class="hero-badge" href="#papers">Papers</a>
-  <a class="hero-badge" href="#repositories">Repositories</a>
+  <a class="hero-badge" href="#repositories-papers">Papers & Repositories</a>
+  
 </div>
 
 
@@ -130,90 +130,30 @@ for future work.
 
 </div>
 
+<div class="section" id="repositories-papers">
+  <h2>Papers & Repositories</h2>
+  <p class="lead">
+    Publications, writing, and codebases connected to the research direction.
+  </p>
 
-<div class="section" id="repositories">
+  <div class="papers-grid">
+    <div
+      class="paper-tile"
+      style="background-image: url('assets/20260308_1556_Image Generation_remix_01kk6z4ce0fwxvejg56t8p72ne.png');"
+    >
+      <div class="paper-overlay"></div>
 
-## Repositories
+      <div class="paper-content">
+        <a class="paper-title" href="PAPER_LINK_1">
+          Short Horizon planning with V-JEPA-2 AC on AI2-Thor rearrange tasks
+        </a>
 
-<p class="lead">
-Codebases for model development, simulation, transfer, and writing assets.
-</p>
-
-<div class="grid">
-
-<div class="card">
-  <a href="REPO_URL_1">
-    <div class="card-title">h-jepa-core</div>
-    <p class="card-meta">Core architecture • training</p>
-    <div class="card-desc">
-      Core models, objectives, latent prediction modules, and training infrastructure.
+        <div class="tile-badges">
+          <a class="paper-badge" href="PAPER_LINK_1">Paper</a>
+          <a class="paper-badge" href="REPO_URL_1">Repository</a>
+          <span class="coming-soon-badge">Coming soon</span>
+        </div>
+      </div>
     </div>
-  </a>
-</div>
-
-<div class="card">
-  <a href="REPO_URL_2">
-    <div class="card-title">babyai-experiments</div>
-    <p class="card-meta">Simulation • evaluation</p>
-    <div class="card-desc">
-      Experiment configs, baselines, metrics, and evaluation pipelines for simulated environments.
-    </div>
-  </a>
-</div>
-
-<div class="card">
-  <a href="REPO_URL_3">
-    <div class="card-title">robot-transfer</div>
-    <p class="card-meta">Robotics • deployment</p>
-    <div class="card-desc">
-      Interfaces, deployment logic, and transfer-oriented components for sim-to-real workflows.
-    </div>
-  </a>
-</div>
-
-<div class="card">
-  <a href="REPO_URL_4">
-    <div class="card-title">docs-and-assets</div>
-    <p class="card-meta">Figures • writing</p>
-    <div class="card-desc">
-      Diagrams, plots, visual assets, paper figures, and supporting writing material.
-    </div>
-  </a>
-</div>
-
-</div>
-</div>
-
-<div class="section" id="papers">
-
-## Papers
-
-<p class="lead">
-Publications and project-adjacent writing connected to the research direction.
-</p>
-
-<div class="grid">
-
-<div class="card paper">
-  <a href="PAPER_LINK_1">
-    <div class="card-title">Paper Title 1 (2026) — Venue optional</div>
-    <p class="card-meta">Julian Quast, Coauthor A, Coauthor B</p>
-    <div class="card-desc">
-      A concise 2–4 line abstract teaser describing the main claim, method, and result.
-    </div>
-  </a>
-</div>
-
-<div class="card paper">
-  <a href="PAPER_LINK_2">
-    <div class="card-title">Paper Title 2 (2025)</div>
-    <p class="card-meta">Julian Quast</p>
-    <div class="card-desc">
-      Brief summary of the contribution, why it matters, and how it connects to this project.
-    </div>
-  </a>
-</div>
-
-</div>
-
+  </div>
 </div>
