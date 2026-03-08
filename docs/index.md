@@ -126,36 +126,10 @@ for future work.
 
 <div class="section" id="timeline">
 
-<img class="timeline-img" src="assets/timeline.png" alt="Project timeline">
+<img class="timeline-img" src="assets/timeline_loto-jepa.drawio.png" alt="Project timeline">
 
 </div>
 
-<div class="section" id="results">
-
-## Results
-
-<div class="results-box">
-
-<p><strong>Status:</strong> Early but promising. The current system already supports a clean end-to-end story from representation learning to evaluation.</p>
-
-<p><strong>Key outcomes:</strong></p>
-
-<ul>
-  <li>Learned latent structure supports higher-level planning signals.</li>
-  <li>Simulation experiments show interpretable progress across tasks.</li>
-  <li>The pipeline is organized for extension toward robotics transfer.</li>
-</ul>
-
-<p><strong>Next steps:</strong></p>
-
-<ul>
-  <li>Scale evaluation across more environments and seeds.</li>
-  <li>Improve temporal abstraction and cross-environment generalization.</li>
-</ul>
-
-</div>
-
-</div>
 
 <div class="section" id="repositories">
 
