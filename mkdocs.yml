@@ -3,12 +3,14 @@ site_url: ""
 
 theme:
   name: material
-  features: []
   palette:
     scheme: default
+  font:
+    text: Manrope
+    code: JetBrains Mono
 
 nav:
-  - Home: index.md
+  - "": index.md
 
 extra_css:
   - styles/extra.css

@@ -1,58 +1,132 @@
+---
+hide:
+  - toc
+  - navigation
+---
+
 <div class="hero">
 
-# Dein sehr langer Projekttitel steht hier (gerne richtig lang)
+<h1>
+Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Architectures
+</h1>
 
-<p class="subhead">
- Apple-artiger 1–2 Satz Teaser: Problem → Approach → Contribution.
+<p class="authors">
+  Julian Quast
+  <a class="author-link"
+     href="https://www.linkedin.com/in/julian-quast-1a4068292/"
+     target="_blank"
+     aria-label="LinkedIn profile">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="22"
+         height="22"
+         viewBox="0 0 24 24"
+         fill="#0A66C2">
+
+      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.5H6V17H8.34M7.17 9.43C7.93 9.43 8.5 8.86 8.5 8.1C8.5 7.34 7.93 6.77 7.17 6.77C6.41 6.77 5.84 7.34 5.84 8.1C5.84 8.86 6.41 9.43 7.17 9.43M18 17V13.5C18 11.57 17.11 10.3 15.27 10.3C14.36 10.3 13.8 10.8 13.57 11.28V10.5H11.34C11.37 11.04 11.34 17 11.34 17H13.68V13.36C13.68 13.17 13.69 12.98 13.75 12.84C13.9 12.46 14.25 12.07 14.83 12.07C15.6 12.07 15.91 12.64 15.91 13.48V17H18Z"/>
+    </svg>
+
+  </a>
 </p>
 
-<div class="badges">
-  <a class="badge" href="LINK_ZUM_PAPER.pdf">📄 Paper</a>
-  <a class="badge" href="LINK_ZUM_CODE">💻 Code</a>
-  <a class="badge" href="LINK_ZUM_VIDEO">🎬 Video</a>
-  <a class="badge" href="LINK_ZUM_DATASET">🧩 Dataset</a>
+<div class="hero-badges">
+  <a class="hero-badge" href="#timeline">Timeline</a>
+  <a class="hero-badge" href="#papers">Papers</a>
+  <a class="hero-badge" href="#repositories">Repositories</a>
 </div>
 
-</div>
-
-<div class="section" id="timeline">
-
-## Timeline
-
-<img class="timeline-img" src="assets/timeline.png" alt="Project timeline">
-
-</div>
-
-<div class="section" id="introduction">
-
-## Introduction
-
-Hier kommt dein Introtext. Apple-ish wirkt am besten mit:
-- kurzen Absätzen
-- klaren Statements
-- wenig “Wall of Text”
 
 </div>
 
 <div class="section" id="video">
 
-## Video
-
-<div class="video-wrap">
-
-<iframe width="100%" height="520"
-  src="https://www.youtube.com/embed/VIDEO_ID"
-  title="Project video"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/YxkGdX4WIBE?start=17"
+      title="Project video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 
 </div>
 
-<p style="opacity:.75; margin-top:10px;">
-Optionaler 1-Satz Kontext: Was sieht man im Video?
+<div class="section" id="introduction">
+
+<p>
+World models play an increasingly important role in modern embodied AI (Ha et al., 2018; Hafner
+et al., 2023; Zhou et al., 2024; Bruce et al., 2025; Assran et al., 2025; Pu et al., 2025). They enable
+agents to internally predict the consequences of their actions, allowing them to plan and learn
+policies based on imagined future trajectories. In parallel, driven by recent advances in large-scale
+self-supervised representation learning—grounded in transformer architectures (Vaswani et al.,
+2017) and foundation-model pretraining—embodied AI is increasingly adopting general-purpose
+visual encoders such as DINOv2 (Oquab et al., 2023). These models show promising results
+on several downstream control tasks and in addressing generalization challenges (Zhou et al.,
+2024; Assran et al., 2025; Bu et al., 2025). With DINO-WM, Zhou et al., 2024 introduced a
+world model that combines a pretrained DINOv2 encoder with an action-conditioned predictor.
+This architecture performs planning directly in the embedding space and demonstrates zero-shot
+planning capabilities on multiple benchmarks.
+Despite these advances, most state-of-the-art models still require labeled interaction data to
+learn action-conditioned dynamics and control policies (Hafner et al., 2023; Hansen et al., 2023;
+Zhou et al., 2024; Assran et al., 2025). Since internet-scale action-labeled datasets are scarce
+and costly to acquire, while raw video is abundant, this reliance on labeled actions limits the
+scalability of world models compared to purely visual pretraining. Moreover, a truly foundational
+world model should operate across diverse environments and embodiments. This would require
+a unified action representation abstracting over embodiment-specific control interfaces, which
+is often impractical or ill-posed, as action semantics are tightly coupled to physical structure
+and actuation. As a result, reliance on explicit action labels further limits generalization and
+transfer (Bu et al., 2025). In response to this limitation, current work on latent action models
+learns implicit action representations from observations alone, typically via inverse dynamics.
+These models encode the changes between consecutive observations into a compact latent action,
+most often using a VAE- or VQ-VAE–based approach (Kingma et al., 2013; Oord et al., 2017;
+Bruce et al., 2025; Gao et al., 2025). Such latent actions can then serve as a control interface for
+downstream tasks, and several works have demonstrated successful planning and policy learning
+using these representations (Schmidt et al., 2023; Bu et al., 2025; Ye et al., 2024a; Zhang et al.,
+2024; Gao et al., 2025; Bruce et al., 2025). However, these methods often rely on pixel-space
+reconstruction losses rather than learning directly in embedding space, and they usually train the
+latent action model separately from the world model or policy. This separation also means that
+decoders are discarded during downstream use, disconnecting learned latent actions from the
+planning and control components (Gao et al., 2025; Bruce et al., 2025). Furthermore, many latent
+action approaches focus on training policies rather than enabling explicit model-based planning.
+Once the policy is trained, incorporating new task information usually requires retraining the
+entire system, whereas learning a dynamics model would allow task optimization at inference
+time without additional training (Bu et al., 2025; Schmidt et al., 2023; Ye et al., 2024a).
+In this thesis, we investigate whether the benefits of pretrained visual embeddings and model-
+based planning can be combined with latent action learning. Concretely, we build on a publicly
+available, pretrained visual encoder and propose a variant of DINO-WM that jointly learns a
+1
+forward dynamics model and an inverse dynamics model directly in the learned embedding space.
+This design enables pretraining the model without ground-truth action labels while reducing the
+number of learned components. The forward model predicts future DINO embeddings conditioned
+on latent actions, while the inverse dynamics model maps pairs of consecutive embeddings to
+latent actions. Training couples these components so that inferred latent actions are directly
+optimized for forward prediction. Planning is performed in the latent action space using a CEM
+optimizer (Rubinstein, 1999). This motivates the central research question of this thesis: Can our
+proposed latent action version of DINO-WM, trained with joint forward and inverse dynamics,
+match the planning performance of the original model on the PushT benchmark?
+To answer this question, we review inverse dynamics architectures and use the resulting insights
+to propose our variant of DINO-WM. We then empirically analyze how the introduction of latent
+actions into the pipeline a"ects its behavior. In particular, we analyze and compare prediction
+quality, planning performance, and the e"ect of actions and latent actions on prediction for our
+variants relative to the baseline. We additionally evaluate the decodability of the learned latent
+actions into ground-truth action labels. This thesis is structured as follows. We first provide
+the scientific background for our approach and review related work and alternative methods.
+We then introduce our proposed architecture in detail. Next, we describe our experimental
+setup, covering dataset curation, the chosen benchmark, training and implementation details,
+and the conducted experiments. We then present and discuss our empirical results. Finally, we
+summarize the contributions and limitations of our approach and outline promising directions
+for future work.
 </p>
+
+
+
+</div>
+
+
+<div class="section" id="timeline">
+
+<img class="timeline-img" src="assets/timeline.png" alt="Project timeline">
 
 </div>
 
@@ -60,16 +134,26 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
 
 ## Results
 
-**Status:** 1–2 Sätze.
+<div class="results-box">
 
-**Key outcomes:**
-- Ergebnis 1
-- Ergebnis 2
-- Ergebnis 3
+<p><strong>Status:</strong> Early but promising. The current system already supports a clean end-to-end story from representation learning to evaluation.</p>
 
-**Next steps:**
-- Punkt 1
-- Punkt 2
+<p><strong>Key outcomes:</strong></p>
+
+<ul>
+  <li>Learned latent structure supports higher-level planning signals.</li>
+  <li>Simulation experiments show interpretable progress across tasks.</li>
+  <li>The pipeline is organized for extension toward robotics transfer.</li>
+</ul>
+
+<p><strong>Next steps:</strong></p>
+
+<ul>
+  <li>Scale evaluation across more environments and seeds.</li>
+  <li>Improve temporal abstraction and cross-environment generalization.</li>
+</ul>
+
+</div>
 
 </div>
 
@@ -77,13 +161,19 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
 
 ## Repositories
 
+<p class="lead">
+Codebases for model development, simulation, transfer, and writing assets.
+</p>
+
 <div class="grid">
 
 <div class="card">
   <a href="REPO_URL_1">
     <div class="card-title">h-jepa-core</div>
     <p class="card-meta">Core architecture • training</p>
-    <div class="card-desc">Hover-Text: Kurzbeschreibung der Repo-Inhalte.</div>
+    <div class="card-desc">
+      Core models, objectives, latent prediction modules, and training infrastructure.
+    </div>
   </a>
 </div>
 
@@ -91,7 +181,9 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
   <a href="REPO_URL_2">
     <div class="card-title">babyai-experiments</div>
     <p class="card-meta">Simulation • evaluation</p>
-    <div class="card-desc">Hover-Text: Experimente, Baselines, Metrics.</div>
+    <div class="card-desc">
+      Experiment configs, baselines, metrics, and evaluation pipelines for simulated environments.
+    </div>
   </a>
 </div>
 
@@ -99,7 +191,9 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
   <a href="REPO_URL_3">
     <div class="card-title">robot-transfer</div>
     <p class="card-meta">Robotics • deployment</p>
-    <div class="card-desc">Hover-Text: Deployment, sim2real, interfaces.</div>
+    <div class="card-desc">
+      Interfaces, deployment logic, and transfer-oriented components for sim-to-real workflows.
+    </div>
   </a>
 </div>
 
@@ -107,7 +201,9 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
   <a href="REPO_URL_4">
     <div class="card-title">docs-and-assets</div>
     <p class="card-meta">Figures • writing</p>
-    <div class="card-desc">Hover-Text: Diagramme, Plots, Writing assets.</div>
+    <div class="card-desc">
+      Diagrams, plots, visual assets, paper figures, and supporting writing material.
+    </div>
   </a>
 </div>
 
@@ -118,13 +214,19 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
 
 ## Papers
 
+<p class="lead">
+Publications and project-adjacent writing connected to the research direction.
+</p>
+
 <div class="grid">
 
 <div class="card paper">
   <a href="PAPER_LINK_1">
     <div class="card-title">Paper Title 1 (2026) — Venue optional</div>
     <p class="card-meta">Julian Quast, Coauthor A, Coauthor B</p>
-    <div class="card-desc">Hover-Text: 2–4 Zeilen Abstract/Teaser.</div>
+    <div class="card-desc">
+      A concise 2–4 line abstract teaser describing the main claim, method, and result.
+    </div>
   </a>
 </div>
 
@@ -132,7 +234,9 @@ Optionaler 1-Satz Kontext: Was sieht man im Video?
   <a href="PAPER_LINK_2">
     <div class="card-title">Paper Title 2 (2025)</div>
     <p class="card-meta">Julian Quast</p>
-    <div class="card-desc">Hover-Text: Kurzabstract / Beitrag in 2–4 Zeilen.</div>
+    <div class="card-desc">
+      Brief summary of the contribution, why it matters, and how it connects to this project.
+    </div>
   </a>
 </div>
 

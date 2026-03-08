@@ -1,124 +1,372 @@
-/* remove header + navigation completely */
+/* =========================
+   GLOBAL LAYOUT
+========================= */
 
-.md-header {
-  display: none !important;
+:root {
+  --page-max: 1480px;
+  --content-max: 980px;
+  --content-narrow: 760px;
+  --radius: 22px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --border-soft: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.md-tabs {
-  display: none !important;
-}
-
-.md-sidebar {
-  display: none !important;
-}
-
+/* remove header + nav + sidebars + footer completely */
+.md-header,
+.md-tabs,
+.md-sidebar,
 .md-footer {
   display: none !important;
 }
 
-
-/* center content */
-
+/* make full page breathe more */
 .md-main__inner {
+  margin: 0 auto !important;
+  max-width: var(--page-max) !important;
+  padding-top: 0 !important;
+}
+
+.md-content {
   margin: 0 auto;
-  max-width: 950px;
 }
 
 .md-content__inner {
-  margin: 0 auto;
-  max-width: 950px;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  padding: 0 !important;
 }
 
+.md-grid {
+  max-width: var(--page-max) !important;
+}
 
-/* remove section borders */
+/* remove built-in article top spacing line behavior */
+.md-content__inner:before {
+  display: none;
+}
+
+/* smoother typography */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* links */
+a {
+  text-decoration: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 160px 20px 70px;
+  margin: 0 auto;
+  background: none !important; /* removes gradient */
+}
+
+.hero h1 {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: clamp(3rem, 6vw, 3rem);
+  line-height: 1.10;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #000 !important;
+}
+
+.subhead {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  font-size: clamp(1.1rem, 2vw, 1.42rem);
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+/* HERO BADGES (Genie-style pills) */
+
+.hero-badges {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-badge {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #f2f2f2;
+  color: #222 !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  transition: all 0.18s ease;
+}
+
+.hero-badge:hover {
+  background: #e8e8e8;
+  transform: translateY(-1px);
+}
+
+.authors {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 450;
+  color: #161515;
+  text-align: center;
+}
+
+.affiliation {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
   border: none !important;
-  padding: 80px 0;
+  padding: 30px 24px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+#introduction.section {
+  max-width: 1300px;
 }
 
-
-/* typography */
-
-h1 {
+.section h2 {
   text-align: center;
-  font-size: 3.2rem;
-  font-weight: 700;
+  margin: 0 0 22px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  font-weight: 750;
+  letter-spacing: -0.02em;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-
-/* center text blocks */
-
-p {
-  text-align: center;
-  max-width: 700px;
+.section > p,
+.section > ul,
+.section > ol,
+.section > blockquote {
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-
-/* timeline image */
-
-.timeline-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+.section p {
+  text-align: center;
+  font-size: 1.06rem;
+  line-height: 1.75;
 }
 
+.section ul,
+.section ol {
+  line-height: 1.8;
+}
 
-/* cards */
+.section li::marker {
+  color: rgba(0, 0, 0, 0.45);
+}
+#video.section {
+  padding-top: 20px;
+}
+
+/* optional intro/result text blocks */
+.lead {
+  font-size: 1.18rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* =========================
+   MEDIA
+========================= */
+
+.timeline-img,
+.figure-large {
+  display: block;
+  width: 100%;
+  max-width: 1180px;
+  margin: 24px auto 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1800px; /* control maximum size */
+  margin: auto;
+  padding-bottom: 56.25%;
+  border-radius: 12px;   /* rounded corners */
+  overflow: hidden;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.video-caption {
+  margin-top: 14px;
+  opacity: 0.72;
+  font-size: 0.98rem;
+}
+
+/* =========================
+   RESULTS BLOCK
+========================= */
+
+.results-box {
+  max-width: 820px;
+  margin: 28px auto 0;
+  padding: 28px 30px;
+  border-radius: 24px;
+  border: var(--border-soft);
+  background: rgba(0, 0, 0, 0.02);
+  box-shadow: var(--shadow-soft);
+}
+
+.results-box p,
+.results-box ul {
+  text-align: left;
+  max-width: none;
+}
+
+.results-box strong {
+  font-weight: 700;
+}
+
+/* =========================
+   GRIDS + CARDS
+========================= */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
 }
 
 .card {
   grid-column: span 6;
-  border-radius: 16px;
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 25px;
-  transition: all 0.2s ease;
-  text-align: center;
+  border-radius: 24px;
+  border: var(--border-soft);
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.card a {
+  display: block;
+  color: inherit !important;
 }
 
 .card-title {
-  font-weight: 700;
+  font-weight: 750;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.card-meta {
+  margin: 0 0 10px;
+  text-align: left !important;
+  font-size: 0.92rem;
+  color: var(--md-default-fg-color--light);
 }
 
 .card-desc {
-  opacity: 0;
   margin-top: 10px;
-  transition: opacity 0.2s ease;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.78);
+  opacity: 0.92;
 }
 
-.card:hover .card-desc {
-  opacity: 1;
+.card.paper {
+  border-left: 4px solid var(--md-primary-fg-color);
 }
 
-@media (max-width: 900px){
-  .card{
+/* =========================
+   SMALL POLISH
+========================= */
+
+/* better spacing after markdown headings inside HTML blocks */
+.section h2 + p {
+  margin-top: 0;
+}
+
+/* keep strong statements neat */
+.center-note {
+  text-align: center;
+  max-width: var(--content-narrow);
+  margin: 16px auto 0;
+  color: var(--md-default-fg-color--light);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 84px 20px 48px;
+  }
+
+  .section {
+    padding: 72px 20px;
+  }
+
+  .grid {
+    gap: 18px;
+  }
+
+  .card {
     grid-column: span 12;
+    padding: 20px;
+  }
+
+  .results-box {
+    padding: 22px 20px;
   }
 }
 
+@media (max-width: 600px) {
+  .badge {
+    width: 100%;
+  }
 
-/* video */
+  .badges {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.video-wrap{
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 16px;
-  overflow: hidden;
+  .video-wrap iframe {
+    min-height: 220px;
+  }
 }
