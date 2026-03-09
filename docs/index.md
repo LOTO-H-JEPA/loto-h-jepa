@@ -133,7 +133,7 @@ for future work.
 <div class="section" id="repositories-papers">
   <h2>Papers & Repositories</h2>
   <p class="lead">
-    Publications, writing, and codebases connected to the research direction.
+    Publications and codebases connected to the research direction.
   </p>
 
   <div class="papers-grid">
