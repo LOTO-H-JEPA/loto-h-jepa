@@ -170,7 +170,7 @@ for future work.
       </a>
 
       <div class="tile-badges">
-        <a class="paper-badge" href="https://www.icloud.com/iclouddrive/0603pxOTM6U9LLJzCW2YvGmvQ#Abschlussarbeit_0450764">Paper</a>
+        <a class="paper-badge" href="assets/papers/Abschlussarbeit_0450764.pdf">Paper</a>
         <a class="paper-badge" href="https://github.com/pythonpedro99/dino_wm_latent_actions">Repository</a>
       </div>
     </div>
