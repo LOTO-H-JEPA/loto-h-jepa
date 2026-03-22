@@ -131,30 +131,12 @@ for future work.
 </div>
 
 <div class="section" id="repositories-papers">
-  <h2>Papers & Repositories</h2>
+  <h2></h2>
   <p class="lead">
     Publications and codebases connected to the research direction.
   </p>
 
   <div class="papers-grid">
-  <!-- Second paper tile -->
-  <div
-    class="paper-tile"
-    style="background-image: url('assets/20260309_1039_Image Generation_remix_01kk8zenymenh9wtpj5q6e8c5h.png');"
-  >
-    <div class="paper-overlay"></div>
-
-    <div class="paper-content">
-      <a class="paper-title" href="PAPER_LINK_2">
-        Action-Label-Free World-Model Planning: Extending DINO-WM with Inverse Dynamics
-      </a>
-
-      <div class="tile-badges">
-        <a class="paper-badge" href="assets/papers/Abschlussarbeit_0450764.pdf">Thesis</a>
-        <a class="paper-badge" href="https://github.com/pythonpedro99/dino_wm_latent_actions">Code</a>
-      </div>
-    </div>
-  </div>
   
   <div
     class="paper-tile"

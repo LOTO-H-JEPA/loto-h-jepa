@@ -301,16 +301,21 @@ a {
    PAPERS + REPOSITORIES GRID
 ========================= */
 
+#repositories-papers h2,
+#repositories-papers .lead {
+  text-align: center;
+}
+
 #repositories-papers.section {
   max-width: 1400px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-#repositories-papers h2,
+/* #repositories-papers h2,
 #repositories-papers .lead {
   text-align: left;
-}
+}*/
 
 #repositories-papers h2 {
   font-size: clamp(1.5rem, 2.2vw, 2.1rem);
@@ -322,9 +327,17 @@ a {
    GRID
 ========================= */
 
-.papers-grid {
+/* .papers-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 28px;
+} */
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 380px));
+  justify-content: center;
   gap: 22px;
   margin-top: 28px;
 }
@@ -336,7 +349,7 @@ a {
 .paper-tile {
   position: relative;
   display: block;
-  min-height: 520px;
+  min-height: 340px;
   border-radius: 26px;
   overflow: hidden;
   background-size: cover;
@@ -372,7 +385,7 @@ a {
   font-size: 1.08rem;
   line-height: 1.32;
   font-weight: 700;
-  color:#000000 !important;
+  color:#ffff !important;
   text-decoration: none;
   letter-spacing: -0.02em;
   text-shadow: none;
@@ -420,9 +433,9 @@ a {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #4a3500;
-  background: rgba(255, 220, 64, 0.95);
-  backdrop-filter: blur(10px);
+  color: #000000 !important;
+  background:#ffff /* rgba(255, 255, 255, 0.2); */
+  /*backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  white-space: nowrap;
+  white-space: nowrap; */
 }
