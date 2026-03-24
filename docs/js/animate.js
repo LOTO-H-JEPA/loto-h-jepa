@@ -1,6 +1,6 @@
 (function () {
   const SELECTOR = ".hjepa-diagram-stage";
-  const DEFAULT_INTERVAL = 10200;
+  const DEFAULT_INTERVAL = 2200;
 
   document.addEventListener("DOMContentLoaded", init);
 

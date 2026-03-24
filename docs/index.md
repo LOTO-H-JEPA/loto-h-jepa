@@ -32,9 +32,39 @@ Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Arc
 <!-- <div class="hero-badges">
   <a class="hero-badge" href="#timeline">Timeline</a>
   <a class="hero-badge" href="#repositories-papers">Papers & Repositories</a>
-  
 </div> -->
 
+</div>
+
+<div class="section intro intro-top" id="introduction-top">
+
+<p>
+World models play an increasingly important role in modern embodied AI (Ha et al., 2018; Hafner
+et al., 2023; Zhou et al., 2024; Bruce et al., 2025; Assran et al., 2025; Pu et al., 2025). They enable
+agents to internally predict the consequences of their actions, allowing them to plan and learn
+policies based on imagined future trajectories. In parallel, driven by recent advances in large-scale
+self-supervised representation learning—grounded in transformer architectures (Vaswani et al.,
+2017) and foundation-model pretraining—embodied AI is increasingly adopting general-purpose
+visual encoders such as DINOv2 (Oquab et al., 2023). These models show promising results
+on several downstream control tasks and in addressing generalization challenges (Zhou et al.,
+2024; Assran et al., 2025; Bu et al., 2025). With DINO-WM, Zhou et al., 2024 introduced a
+world model that combines a pretrained DINOv2 encoder with an action-conditioned predictor.
+This architecture performs planning directly in the embedding space and demonstrates zero-shot
+planning capabilities on multiple benchmarks.
+</p>
+
+<p>
+Despite these advances, most state-of-the-art models still require labeled interaction data to
+learn action-conditioned dynamics and control policies (Hafner et al., 2023; Hansen et al., 2023;
+Zhou et al., 2024; Assran et al., 2025). Since internet-scale action-labeled datasets are scarce
+and costly to acquire, while raw video is abundant, this reliance on labeled actions limits the
+scalability of world models compared to purely visual pretraining. Moreover, a truly foundational
+world model should operate across diverse environments and embodiments. This would require
+a unified action representation abstracting over embodiment-specific control interfaces, which
+is often impractical or ill-posed, as action semantics are tightly coupled to physical structure
+and actuation. As a result, reliance on explicit action labels further limits generalization and
+transfer (Bu et al., 2025).
+</p>
 
 </div>
 
@@ -70,38 +100,7 @@ Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Arc
       "assets/diagrams/frame_22.svg",
       "assets/diagrams/frame_23.svg",
       "assets/diagrams/frame_24.svg",
-      "assets/diagrams/frame_25.svg",
-      "assets/diagrams/frame_26.svg",
-      "assets/diagrams/frame_27.svg",
-      "assets/diagrams/frame_28.svg",
-      "assets/diagrams/frame_29.svg",
-      "assets/diagrams/frame_30.svg",
-      "assets/diagrams/frame_31.svg",
-      "assets/diagrams/frame_32.svg",
-      "assets/diagrams/frame_33.svg",
-      "assets/diagrams/frame_34.svg",
-      "assets/diagrams/frame_35.svg",
-      "assets/diagrams/frame_36.svg",
-      "assets/diagrams/frame_37.svg",
-      "assets/diagrams/frame_38.svg",
-      "assets/diagrams/frame_39.svg",
-      "assets/diagrams/frame_40.svg",
-      "assets/diagrams/frame_41.svg",
-      "assets/diagrams/frame_42.svg",
-      "assets/diagrams/frame_43.svg",
-      "assets/diagrams/frame_44.svg",
-      "assets/diagrams/frame_45.svg",
-      "assets/diagrams/frame_46.svg",
-      "assets/diagrams/frame_47.svg",
-      "assets/diagrams/frame_48.svg",
-      "assets/diagrams/frame_49.svg",
-      "assets/diagrams/frame_50.svg",
-      "assets/diagrams/frame_51.svg",
-      "assets/diagrams/frame_52.svg",
-      "assets/diagrams/frame_53.svg",
-      "assets/diagrams/frame_54.svg",
-      "assets/diagrams/frame_55.svg",
-      "assets/diagrams/frame_56.svg"
+      "assets/diagrams/frame_25.svg"
     ]'
       data-autoplay="true"
       data-interval="2200"
@@ -111,50 +110,31 @@ Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Arc
   </div>
 </div>
 
-<div class="section" id="introduction">
+<div class="section intro intro-bottom" id="introduction">
 
 <p>
-World models play an increasingly important role in modern embodied AI (Ha et al., 2018; Hafner
-et al., 2023; Zhou et al., 2024; Bruce et al., 2025; Assran et al., 2025; Pu et al., 2025). They enable
-agents to internally predict the consequences of their actions, allowing them to plan and learn
-policies based on imagined future trajectories. In parallel, driven by recent advances in large-scale
-self-supervised representation learning—grounded in transformer architectures (Vaswani et al.,
-2017) and foundation-model pretraining—embodied AI is increasingly adopting general-purpose
-visual encoders such as DINOv2 (Oquab et al., 2023). These models show promising results
-on several downstream control tasks and in addressing generalization challenges (Zhou et al.,
-2024; Assran et al., 2025; Bu et al., 2025). With DINO-WM, Zhou et al., 2024 introduced a
-world model that combines a pretrained DINOv2 encoder with an action-conditioned predictor.
-This architecture performs planning directly in the embedding space and demonstrates zero-shot
-planning capabilities on multiple benchmarks.
-Despite these advances, most state-of-the-art models still require labeled interaction data to
-learn action-conditioned dynamics and control policies (Hafner et al., 2023; Hansen et al., 2023;
-Zhou et al., 2024; Assran et al., 2025). Since internet-scale action-labeled datasets are scarce
-and costly to acquire, while raw video is abundant, this reliance on labeled actions limits the
-scalability of world models compared to purely visual pretraining. Moreover, a truly foundational
-world model should operate across diverse environments and embodiments. This would require
-a unified action representation abstracting over embodiment-specific control interfaces, which
-is often impractical or ill-posed, as action semantics are tightly coupled to physical structure
-and actuation. As a result, reliance on explicit action labels further limits generalization and
-transfer (Bu et al., 2025). In response to this limitation, current work on latent action models
-learns implicit action representations from observations alone, typically via inverse dynamics.
-These models encode the changes between consecutive observations into a compact latent action,
-most often using a VAE- or VQ-VAE–based approach (Kingma et al., 2013; Oord et al., 2017;
-Bruce et al., 2025; Gao et al., 2025). Such latent actions can then serve as a control interface for
-downstream tasks, and several works have demonstrated successful planning and policy learning
-using these representations (Schmidt et al., 2023; Bu et al., 2025; Ye et al., 2024a; Zhang et al.,
-2024; Gao et al., 2025; Bruce et al., 2025). However, these methods often rely on pixel-space
-reconstruction losses rather than learning directly in embedding space, and they usually train the
-latent action model separately from the world model or policy. This separation also means that
-decoders are discarded during downstream use, disconnecting learned latent actions from the
-planning and control components (Gao et al., 2025; Bruce et al., 2025). Furthermore, many latent
-action approaches focus on training policies rather than enabling explicit model-based planning.
-Once the policy is trained, incorporating new task information usually requires retraining the
-entire system, whereas learning a dynamics model would allow task optimization at inference
-time without additional training (Bu et al., 2025; Schmidt et al., 2023; Ye et al., 2024a).
+In response to these limitations, current work on latent action models learns implicit action
+representations from observations alone, typically via inverse dynamics. These models encode the
+changes between consecutive observations into a compact latent action, most often using a VAE-
+or VQ-VAE–based approach (Kingma et al., 2013; Oord et al., 2017; Bruce et al., 2025; Gao et al.,
+2025). Such latent actions can then serve as a control interface for downstream tasks, and several
+works have demonstrated successful planning and policy learning using these representations
+(Schmidt et al., 2023; Bu et al., 2025; Ye et al., 2024a; Zhang et al., 2024; Gao et al., 2025; Bruce
+et al., 2025). However, these methods often rely on pixel-space reconstruction losses rather than
+learning directly in embedding space, and they usually train the latent action model separately
+from the world model or policy. This separation also means that decoders are discarded during
+downstream use, disconnecting learned latent actions from the planning and control components
+(Gao et al., 2025; Bruce et al., 2025). Furthermore, many latent action approaches focus on
+training policies rather than enabling explicit model-based planning. Once the policy is trained,
+incorporating new task information usually requires retraining the entire system, whereas learning
+a dynamics model would allow task optimization at inference time without additional training
+(Bu et al., 2025; Schmidt et al., 2023; Ye et al., 2024a).
+</p>
+
+<p>
 In this thesis, we investigate whether the benefits of pretrained visual embeddings and model-
 based planning can be combined with latent action learning. Concretely, we build on a publicly
 available, pretrained visual encoder and propose a variant of DINO-WM that jointly learns a
-1
 forward dynamics model and an inverse dynamics model directly in the learned embedding space.
 This design enables pretraining the model without ground-truth action labels while reducing the
 number of learned components. The forward model predicts future DINO embeddings conditioned
@@ -164,10 +144,13 @@ optimized for forward prediction. Planning is performed in the latent action spa
 optimizer (Rubinstein, 1999). This motivates the central research question of this thesis: Can our
 proposed latent action version of DINO-WM, trained with joint forward and inverse dynamics,
 match the planning performance of the original model on the PushT benchmark?
+</p>
+
+<p>
 To answer this question, we review inverse dynamics architectures and use the resulting insights
 to propose our variant of DINO-WM. We then empirically analyze how the introduction of latent
-actions into the pipeline a"ects its behavior. In particular, we analyze and compare prediction
-quality, planning performance, and the e"ect of actions and latent actions on prediction for our
+actions into the pipeline affects its behavior. In particular, we analyze and compare prediction
+quality, planning performance, and the effect of actions and latent actions on prediction for our
 variants relative to the baseline. We additionally evaluate the decodability of the learned latent
 actions into ground-truth action labels. This thesis is structured as follows. We first provide
 the scientific background for our approach and review related work and alternative methods.
@@ -178,10 +161,7 @@ summarize the contributions and limitations of our approach and outline promisin
 for future work.
 </p>
 
-
-
 </div>
-
 
 <div class="section" id="timeline">
 
@@ -196,26 +176,25 @@ for future work.
   </p>
 
   <div class="papers-grid">
-  
-  <div
-    class="paper-tile"
-    style="background-image: url('assets/images/20260308_1556_Image Generation_remix_01kk6z4ce0fwxvejg56t8p72ne.png');"
-  >
-    <div class="paper-overlay"></div>
 
-    <div class="paper-content">
-      <a class="paper-title" href="PAPER_LINK_1">
-        Short Horizon planning with V-JEPA-2 AC on AI2-Thor rearrange tasks
-      </a>
+    <div
+      class="paper-tile"
+      style="background-image: url('assets/images/20260308_1556_Image Generation_remix_01kk6z4ce0fwxvejg56t8p72ne.png');"
+    >
+      <div class="paper-overlay"></div>
 
-      <div class="tile-badges">
-        <a class="paper-badge" href="PAPER_LINK_1">Paper</a>
-        <a class="paper-badge" href="REPO_URL_1">Code</a>
-        <span class="coming-soon-badge">Coming soon</span>
+      <div class="paper-content">
+        <a class="paper-title" href="PAPER_LINK_1">
+          Short Horizon planning with V-JEPA-2 AC on AI2-Thor rearrange tasks
+        </a>
+
+        <div class="tile-badges">
+          <a class="paper-badge" href="PAPER_LINK_1">Paper</a>
+          <a class="paper-badge" href="REPO_URL_1">Code</a>
+          <span class="coming-soon-badge">Coming soon</span>
+        </div>
       </div>
     </div>
+
   </div>
-
-  
-
 </div>
