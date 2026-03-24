@@ -38,18 +38,77 @@ Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Arc
 
 </div>
 
-<div class="section" id="video">
+<div class="section" id="architecture-diagram">
+  <div class="hjepa-diagram-shell">
+    <div
+      class="hjepa-diagram-stage"
+      id="hjepa-stage"
+      data-svg-states='[
+      "assets/diagrams/frame_1.svg",
+      "assets/diagrams/frame_2.svg",
+      "assets/diagrams/frame_3.svg",
+      "assets/diagrams/frame_4.svg",
+      "assets/diagrams/frame_5.svg",
+      "assets/diagrams/frame_6.svg",
+      "assets/diagrams/frame_7.svg",
+      "assets/diagrams/frame_8.svg",
+      "assets/diagrams/frame_9.svg",
+      "assets/diagrams/frame_10.svg",
+      "assets/diagrams/frame_11.svg",
+      "assets/diagrams/frame_12.svg",
+      "assets/diagrams/frame_13.svg",
+      "assets/diagrams/frame_14.svg",
+      "assets/diagrams/frame_15.svg",
+      "assets/diagrams/frame_16.svg",
+      "assets/diagrams/frame_17.svg",
+      "assets/diagrams/frame_18.svg",
+      "assets/diagrams/frame_19.svg",
+      "assets/diagrams/frame_19a.svg",
+      "assets/diagrams/frame_20.svg",
+      "assets/diagrams/frame_21.svg",
+      "assets/diagrams/frame_21a.svg",
+      "assets/diagrams/frame_22.svg",
+      "assets/diagrams/frame_23.svg",
+      "assets/diagrams/frame_24.svg",
+      "assets/diagrams/frame_25.svg",
+      "assets/diagrams/frame_26.svg",
+      "assets/diagrams/frame_27.svg",
+      "assets/diagrams/frame_28.svg",
+      "assets/diagrams/frame_29.svg",
+      "assets/diagrams/frame_30.svg",
+      "assets/diagrams/frame_31.svg",
+      "assets/diagrams/frame_32.svg",
+      "assets/diagrams/frame_33.svg",
+      "assets/diagrams/frame_34.svg",
+      "assets/diagrams/frame_35.svg",
+      "assets/diagrams/frame_36.svg",
+      "assets/diagrams/frame_37.svg",
+      "assets/diagrams/frame_38.svg",
+      "assets/diagrams/frame_39.svg",
+      "assets/diagrams/frame_40.svg",
+      "assets/diagrams/frame_41.svg",
+      "assets/diagrams/frame_42.svg",
+      "assets/diagrams/frame_43.svg",
+      "assets/diagrams/frame_44.svg",
+      "assets/diagrams/frame_45.svg",
+      "assets/diagrams/frame_46.svg",
+      "assets/diagrams/frame_47.svg",
+      "assets/diagrams/frame_48.svg",
+      "assets/diagrams/frame_49.svg",
+      "assets/diagrams/frame_50.svg",
+      "assets/diagrams/frame_51.svg",
+      "assets/diagrams/frame_52.svg",
+      "assets/diagrams/frame_53.svg",
+      "assets/diagrams/frame_54.svg",
+      "assets/diagrams/frame_55.svg",
+      "assets/diagrams/frame_56.svg"
+    ]'
+      data-autoplay="true"
+      data-interval="2200"
+    ></div>
 
-  <div class="video-wrap">
-    <iframe
-      src="https://www.youtube.com/embed/YxkGdX4WIBE?start=17"
-      title="Project video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
+    <div class="hjepa-diagram-content"></div>
   </div>
-
 </div>
 
 <div class="section" id="introduction">
@@ -126,7 +185,7 @@ for future work.
 
 <div class="section" id="timeline">
 
-<img class="timeline-img" src="assets/timeline_loto-jepa.drawio.png" alt="Project timeline">
+<img class="timeline-img" src="assets/images/timeline_loto-jepa.drawio.png" alt="Project timeline">
 
 </div>
 
@@ -140,7 +199,7 @@ for future work.
   
   <div
     class="paper-tile"
-    style="background-image: url('assets/20260308_1556_Image Generation_remix_01kk6z4ce0fwxvejg56t8p72ne.png');"
+    style="background-image: url('assets/images/20260308_1556_Image Generation_remix_01kk6z4ce0fwxvejg56t8p72ne.png');"
   >
     <div class="paper-overlay"></div>
 

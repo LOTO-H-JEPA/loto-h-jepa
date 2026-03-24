@@ -1,0 +1,51 @@
+.hjepa-diagram-shell {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.hjepa-diagram-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hjepa-diagram-content {
+  position: relative;
+  z-index: 1;
+  min-height: 70vh;
+}
+
+.hjepa-svg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.hjepa-svg-layer.is-active {
+  opacity: 1;
+}
+
+.hjepa-svg-layer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hjepa-diagram-shell,
+  .hjepa-diagram-content {
+    min-height: 48vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hjepa-svg-layer {
+    transition: none !important;
+    animation: none !important;
+  }
+}
