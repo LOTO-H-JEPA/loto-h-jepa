@@ -1,0 +1,549 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title></title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="styles/extra.css">
+    
+      <link rel="stylesheet" href="styles/diagram.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="" class="md-header__button md-logo" aria-label="" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<div class="hero">
+
+<h1>
+Long-Horizon Real-Time Planning with Hierarchical Joint Embedding Predictive Architectures
+</h1>
+
+<p class="authors">
+  Julian Quast
+  <a class="author-link"
+     href="https://www.linkedin.com/in/julian-quast-1a4068292/"
+     target="_blank"
+     aria-label="LinkedIn profile">
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="22"
+         height="22"
+         viewBox="0 0 24 24"
+         fill="#0A66C2">
+
+      <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.5H6V17H8.34M7.17 9.43C7.93 9.43 8.5 8.86 8.5 8.1C8.5 7.34 7.93 6.77 7.17 6.77C6.41 6.77 5.84 7.34 5.84 8.1C5.84 8.86 6.41 9.43 7.17 9.43M18 17V13.5C18 11.57 17.11 10.3 15.27 10.3C14.36 10.3 13.8 10.8 13.57 11.28V10.5H11.34C11.37 11.04 11.34 17 11.34 17H13.68V13.36C13.68 13.17 13.69 12.98 13.75 12.84C13.9 12.46 14.25 12.07 14.83 12.07C15.6 12.07 15.91 12.64 15.91 13.48V17H18Z"/>
+    </svg>
+
+  </a>
+</p>
+
+<!-- <div class="hero-badges">
+  <a class="hero-badge" href="#timeline">Timeline</a>
+  <a class="hero-badge" href="#repositories-papers">Papers & Repositories</a>
+</div> -->
+
+</div>
+
+<div class="section intro intro-top" id="introduction-top">
+
+<p>
+World models play an increasingly important role in modern embodied AI (Ha et al., 2018; Hafner
+et al., 2023; Zhou et al., 2024; Bruce et al., 2025; Assran et al., 2025; Pu et al., 2025). They enable
+agents to internally predict the consequences of their actions, allowing them to plan and learn
+policies based on imagined future trajectories. In parallel, driven by recent advances in large-scale
+self-supervised representation learning—grounded in transformer architectures (Vaswani et al.,
+2017) and foundation-model pretraining—embodied AI is increasingly adopting general-purpose
+visual encoders such as DINOv2 (Oquab et al., 2023). These models show promising results
+on several downstream control tasks and in addressing generalization challenges (Zhou et al.,
+2024; Assran et al., 2025; Bu et al., 2025). With DINO-WM, Zhou et al., 2024 introduced a
+world model that combines a pretrained DINOv2 encoder with an action-conditioned predictor.
+This architecture performs planning directly in the embedding space and demonstrates zero-shot
+planning capabilities on multiple benchmarks.
+</p>
+
+<p>
+Despite these advances, most state-of-the-art models still require labeled interaction data to
+learn action-conditioned dynamics and control policies (Hafner et al., 2023; Hansen et al., 2023;
+Zhou et al., 2024; Assran et al., 2025). Since internet-scale action-labeled datasets are scarce
+and costly to acquire, while raw video is abundant, this reliance on labeled actions limits the
+scalability of world models compared to purely visual pretraining. Moreover, a truly foundational
+world model should operate across diverse environments and embodiments. This would require
+a unified action representation abstracting over embodiment-specific control interfaces, which
+is often impractical or ill-posed, as action semantics are tightly coupled to physical structure
+and actuation. As a result, reliance on explicit action labels further limits generalization and
+transfer (Bu et al., 2025).
+</p>
+
+</div>
+
+<div class="section" id="architecture-diagram">
+  <div class="hjepa-diagram-shell">
+    <div
+      class="hjepa-diagram-stage"
+      id="hjepa-stage"
+      data-svg-states='[
+  "assets/diagrams/frame_1.svg",
+  "assets/diagrams/frame_2.svg",
+  "assets/diagrams/frame_3.svg",
+  "assets/diagrams/frame_4.svg",
+  "assets/diagrams/frame_5.svg",
+  "assets/diagrams/frame_6.svg",
+  "assets/diagrams/frame_7.svg",
+  "assets/diagrams/frame_8.svg",
+  "assets/diagrams/frame_9.svg",
+  "assets/diagrams/frame_10.svg",
+  "assets/diagrams/frame_11.svg",
+  "assets/diagrams/frame_12.svg",
+  "assets/diagrams/frame_13.svg",
+  "assets/diagrams/frame_14.svg",
+  "assets/diagrams/frame_19.svg",
+  "assets/diagrams/frame_19a.svg",
+  "assets/diagrams/frame_20.svg",
+  "assets/diagrams/frame_21.svg",
+  "assets/diagrams/frame_21a.svg",
+  "assets/diagrams/frame_22.svg",
+  "assets/diagrams/frame_23.svg",
+  "assets/diagrams/frame_24.svg",
+  "assets/diagrams/frame_25.svg",
+  "assets/diagrams/frame_26.svg",
+  "assets/diagrams/frame_27.svg",
+  "assets/diagrams/frame_28.svg",
+  "assets/diagrams/frame_29.svg",
+  "assets/diagrams/frame_30.svg",
+  "assets/diagrams/frame_31.svg",
+  "assets/diagrams/frame_32.svg",
+  "assets/diagrams/frame_33.svg",
+  "assets/diagrams/frame_34.svg",
+  "assets/diagrams/frame_35.svg",
+  "assets/diagrams/frame_36.svg",
+  "assets/diagrams/frame_37.svg",
+  "assets/diagrams/frame_38.svg",
+  "assets/diagrams/frame_39.svg",
+  "assets/diagrams/frame_40.svg",
+  "assets/diagrams/frame_41.svg",
+  "assets/diagrams/frame_42.svg",
+  "assets/diagrams/frame_43.svg",
+  "assets/diagrams/frame_44.svg",
+  "assets/diagrams/frame_45.svg",
+  "assets/diagrams/frame_46.svg",
+  "assets/diagrams/frame_47.svg",
+  "assets/diagrams/frame_48.svg",
+  "assets/diagrams/frame_49.svg",
+  "assets/diagrams/frame_50.svg"
+]'
+      data-autoplay="true"
+      data-interval="2200"
+    ></div>
+
+    <div class="hjepa-diagram-content"></div>
+  </div>
+</div>
+
+<div class="section intro intro-bottom" id="introduction">
+
+<p>
+In response to these limitations, current work on latent action models learns implicit action
+representations from observations alone, typically via inverse dynamics. These models encode the
+changes between consecutive observations into a compact latent action, most often using a VAE-
+or VQ-VAE–based approach (Kingma et al., 2013; Oord et al., 2017; Bruce et al., 2025; Gao et al.,
+2025). Such latent actions can then serve as a control interface for downstream tasks, and several
+works have demonstrated successful planning and policy learning using these representations
+(Schmidt et al., 2023; Bu et al., 2025; Ye et al., 2024a; Zhang et al., 2024; Gao et al., 2025; Bruce
+et al., 2025). However, these methods often rely on pixel-space reconstruction losses rather than
+learning directly in embedding space, and they usually train the latent action model separately
+from the world model or policy. This separation also means that decoders are discarded during
+downstream use, disconnecting learned latent actions from the planning and control components
+(Gao et al., 2025; Bruce et al., 2025). Furthermore, many latent action approaches focus on
+training policies rather than enabling explicit model-based planning. Once the policy is trained,
+incorporating new task information usually requires retraining the entire system, whereas learning
+a dynamics model would allow task optimization at inference time without additional training
+(Bu et al., 2025; Schmidt et al., 2023; Ye et al., 2024a).
+</p>
+
+<p>
+In this thesis, we investigate whether the benefits of pretrained visual embeddings and model-
+based planning can be combined with latent action learning. Concretely, we build on a publicly
+available, pretrained visual encoder and propose a variant of DINO-WM that jointly learns a
+forward dynamics model and an inverse dynamics model directly in the learned embedding space.
+This design enables pretraining the model without ground-truth action labels while reducing the
+number of learned components. The forward model predicts future DINO embeddings conditioned
+on latent actions, while the inverse dynamics model maps pairs of consecutive embeddings to
+latent actions. Training couples these components so that inferred latent actions are directly
+optimized for forward prediction. Planning is performed in the latent action space using a CEM
+optimizer (Rubinstein, 1999). This motivates the central research question of this thesis: Can our
+proposed latent action version of DINO-WM, trained with joint forward and inverse dynamics,
+match the planning performance of the original model on the PushT benchmark?
+</p>
+
+<p>
+To answer this question, we review inverse dynamics architectures and use the resulting insights
+to propose our variant of DINO-WM. We then empirically analyze how the introduction of latent
+actions into the pipeline affects its behavior. In particular, we analyze and compare prediction
+quality, planning performance, and the effect of actions and latent actions on prediction for our
+variants relative to the baseline. We additionally evaluate the decodability of the learned latent
+actions into ground-truth action labels. This thesis is structured as follows. We first provide
+the scientific background for our approach and review related work and alternative methods.
+We then introduce our proposed architecture in detail. Next, we describe our experimental
+setup, covering dataset curation, the chosen benchmark, training and implementation details,
+and the conducted experiments. We then present and discuss our empirical results. Finally, we
+summarize the contributions and limitations of our approach and outline promising directions
+for future work.
+</p>
+
+</div>
+
+<div class="section" id="timeline">
+
+<img class="timeline-img" src="assets/images/timeline_loto-jepa.drawio.png" alt="Project timeline">
+
+</div>
+
+<div class="section" id="repositories-papers">
+  <h2></h2>
+  <p class="lead">
+    Publications and codebases connected to the research direction.
+  </p>
+
+  <div class="papers-grid">
+
+    <div
+      class="paper-tile"
+      style="background-image: url('assets/images/20260308_1556_Image Generation_remix_01kk6z4ce0fwxvejg56t8p72ne.png');"
+    >
+      <div class="paper-overlay"></div>
+
+      <div class="paper-content">
+        <a class="paper-title" href="PAPER_LINK_1">
+          Short Horizon planning with V-JEPA-2 AC on AI2-Thor rearrange tasks
+        </a>
+
+        <div class="tile-badges">
+          <a class="paper-badge" href="PAPER_LINK_1">Paper</a>
+          <a class="paper-badge" href="REPO_URL_1">Code</a>
+          <span class="coming-soon-badge">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+      
+        <script src="js/animate.js"></script>
+      
+    
+  </body>
+</html>
